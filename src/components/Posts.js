@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import Post from './Post';
 import apiClient from './http-common';
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Posts() {
     const [posts, setPosts] = useState([]);

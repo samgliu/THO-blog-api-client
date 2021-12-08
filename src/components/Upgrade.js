@@ -1,6 +1,6 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import axios from 'axios';
 
@@ -9,15 +9,7 @@ function Upgrade() {
     const [state, setState] = useState({
         admin_password: '',
     });
-    const {
-        user,
-        setUser,
-        isLoggedIn,
-        setIsLoggedIn,
-        isAdmin,
-        setIsAdmin,
-        doesHttpOnlyCookieExist,
-    } = useContext(GlobalContext);
+    const { setUser, setIsLoggedIn, setIsAdmin } = useContext(GlobalContext);
     const navigate = useNavigate();
     function validator() {
         //console.log(state);

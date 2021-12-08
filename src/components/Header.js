@@ -1,19 +1,12 @@
-import { Link, useNavigate } from 'react-router-dom';
-import { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import apiClient from './http-common';
 
 function Header() {
-    const {
-        user,
-        setUser,
-        isLoggedIn,
-        setIsLoggedIn,
-        isAdmin,
-        setIsAdmin,
-        doesHttpOnlyCookieExist,
-    } = useContext(GlobalContext);
-    const navigate = useNavigate();
+    const { user, setUser, isLoggedIn, setIsLoggedIn, isAdmin, setIsAdmin } =
+        useContext(GlobalContext);
+    //const navigate = useNavigate();
 
     async function handleLogOut(e) {
         e.preventDefault();

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useState } from 'react';
 
 const initialState = [];
 
@@ -15,7 +15,7 @@ export const GlobalProvider = ({ children }) => {
         var expires = 'expires=' + d.toUTCString();
 
         document.cookie = cookiename + '=new_value;path=/;' + expires;
-        return document.cookie.indexOf(cookiename + '=') == -1;
+        return document.cookie.indexOf(cookiename + '=') === -1;
     }
 
     return (

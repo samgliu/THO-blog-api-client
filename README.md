@@ -1,3 +1,34 @@
+# Blog API server
+
+# Description
+
+A blog API server side build for TOP project.
+
+Server repository:https://github.com/samgliu/THO-blog-api
+
+         API Demo:https://morning-dawn-19775.herokuapp.com/
+
+Client repository:
+
+# Built With
+
+-   React
+
+# Feature:
+
+Create User  
+Log in/out  
+Auth  
+Post  
+Comment  
+Server/Client/CMS
+RESTful
+
+# API Usage:
+
+must change package.json to api server addres like:
+"proxy": "https://morning-dawn-19775.herokuapp.com/"
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

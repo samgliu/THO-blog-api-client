@@ -1,5 +1,5 @@
 //import { useContext, useEffect, useState } from 'react';
-import apiClient from './http-common';
+//import apiClient from './http-common';
 
 function NewComment({ pid, handlePostCommentData }) {
     let name = '';

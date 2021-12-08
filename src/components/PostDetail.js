@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import {} from 'react-router-dom';
 import Header from '../components/Header';
 import Comments from '../components/Comments';
 import NewComment from '../components/NewComment';
@@ -7,19 +7,11 @@ import apiClient from './http-common';
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
-function PostDetail(props) {
+function PostDetail() {
     const id = useParams().id;
     const [post, setPost] = useState([]);
     const [comments, setComments] = useState([]);
-    const {
-        user,
-        setUser,
-        isLoggedIn,
-        setIsLoggedIn,
-        isAdmin,
-        setIsAdmin,
-        doesHttpOnlyCookieExist,
-    } = useContext(GlobalContext);
+    const { setUser, setIsLoggedIn, setIsAdmin } = useContext(GlobalContext);
     /*
     const fortmatResponse = (res) => {
         return JSON.stringify(res, null, 2);

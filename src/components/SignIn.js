@@ -1,6 +1,6 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import axios from 'axios';
 
@@ -10,13 +10,7 @@ function SignIn() {
         username: '',
         password: '',
     });
-    const {
-        user,
-        setUser,
-        isLoggedIn,
-        setIsLoggedIn,
-        doesHttpOnlyCookieExist,
-    } = useContext(GlobalContext);
+    const { setUser, setIsLoggedIn } = useContext(GlobalContext);
     const navigate = useNavigate();
     function validator() {
         //console.log(state);

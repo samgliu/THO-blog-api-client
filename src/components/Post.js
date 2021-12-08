@@ -1,19 +1,11 @@
 import { Link, useNavigate } from 'react-router-dom';
 //import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import axios from 'axios';
 
 function Post({ post, deletePostLocal }) {
-    const {
-        user,
-        setUser,
-        isLoggedIn,
-        setIsLoggedIn,
-        isAdmin,
-        SetIsAdmin,
-        doesHttpOnlyCookieExist,
-    } = useContext(GlobalContext);
+    const { isAdmin } = useContext(GlobalContext);
     const navigate = useNavigate();
     async function handleDeleteOnClick(e) {
         e.preventDefault();

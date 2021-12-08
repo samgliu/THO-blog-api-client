@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
@@ -10,14 +10,7 @@ function NewPost() {
         topic: '',
         content: '',
     });
-    const {
-        user,
-        setUser,
-        isLoggedIn,
-        setIsLoggedIn,
-        setIsAdmin,
-        doesHttpOnlyCookieExist,
-    } = useContext(GlobalContext);
+    const { setUser, setIsLoggedIn, setIsAdmin } = useContext(GlobalContext);
     const navigate = useNavigate();
 
     useEffect(() => {

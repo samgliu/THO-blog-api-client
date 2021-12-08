@@ -1,19 +1,11 @@
 //import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import axios from 'axios';
 
 function Comments({ comments, deleteCommentLocal }) {
-    const {
-        user,
-        setUser,
-        isLoggedIn,
-        setIsLoggedIn,
-        isAdmin,
-        SetIsAdmin,
-        doesHttpOnlyCookieExist,
-    } = useContext(GlobalContext);
+    const { isAdmin } = useContext(GlobalContext);
     const id = useParams().id;
     const navigate = useNavigate();
     async function commentDeleteHandler(e) {
