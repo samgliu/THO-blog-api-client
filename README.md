@@ -6,9 +6,9 @@ A blog API server side build for TOP project.
 
 Server repository:https://github.com/samgliu/THO-blog-api
 
-         API Demo:https://morning-dawn-19775.herokuapp.com/
+Server API Demo:https://morning-dawn-19775.herokuapp.com/
 
-Client repository:
+Client repository:https://github.com/samgliu/THO-blog-api-client
 
 # Built With
 

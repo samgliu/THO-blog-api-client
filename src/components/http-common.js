@@ -5,5 +5,7 @@ export default axios.create({
     baseURL: process.env.REACT_APP_BLOG_API,
     headers: {
         'Content-type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
     },
+    withCredentials: true,
 });

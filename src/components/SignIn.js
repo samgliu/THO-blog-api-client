@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import { useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import axios from 'axios';
+import apiClient from './http-common';
 
 function SignIn() {
     const [errors, setErrors] = useState(null);
@@ -38,7 +39,7 @@ function SignIn() {
     async function signInPostData() {
         try {
             const params = `/signin?username=${state.username}&password=${state.password}`;
-            const res = await axios.post(
+            /*const res = await axios.post(
                 params,
                 {
                     headers: {
@@ -46,7 +47,8 @@ function SignIn() {
                     },
                 },
                 { withCredentials: true }
-            );
+            );*/
+            const res = await apiClient.post(params);
             if (res.status === 200) {
                 setIsLoggedIn(true);
                 setUser(res.data);
