@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/THO-blog-api-client/static/css/main.e50104ce.chunk.css",
-    "main.js": "/THO-blog-api-client/static/js/main.6d7336d1.chunk.js",
-    "main.js.map": "/THO-blog-api-client/static/js/main.6d7336d1.chunk.js.map",
+    "main.js": "/THO-blog-api-client/static/js/main.eb30a779.chunk.js",
+    "main.js.map": "/THO-blog-api-client/static/js/main.eb30a779.chunk.js.map",
     "runtime-main.js": "/THO-blog-api-client/static/js/runtime-main.3ccffd08.js",
     "runtime-main.js.map": "/THO-blog-api-client/static/js/runtime-main.3ccffd08.js.map",
-    "static/js/2.fcca304b.chunk.js": "/THO-blog-api-client/static/js/2.fcca304b.chunk.js",
-    "static/js/2.fcca304b.chunk.js.map": "/THO-blog-api-client/static/js/2.fcca304b.chunk.js.map",
+    "static/js/2.9d91fe12.chunk.js": "/THO-blog-api-client/static/js/2.9d91fe12.chunk.js",
+    "static/js/2.9d91fe12.chunk.js.map": "/THO-blog-api-client/static/js/2.9d91fe12.chunk.js.map",
     "index.html": "/THO-blog-api-client/index.html",
     "static/css/main.e50104ce.chunk.css.map": "/THO-blog-api-client/static/css/main.e50104ce.chunk.css.map",
-    "static/js/2.fcca304b.chunk.js.LICENSE.txt": "/THO-blog-api-client/static/js/2.fcca304b.chunk.js.LICENSE.txt"
+    "static/js/2.9d91fe12.chunk.js.LICENSE.txt": "/THO-blog-api-client/static/js/2.9d91fe12.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3ccffd08.js",
-    "static/js/2.fcca304b.chunk.js",
+    "static/js/2.9d91fe12.chunk.js",
     "static/css/main.e50104ce.chunk.css",
-    "static/js/main.6d7336d1.chunk.js"
+    "static/js/main.eb30a779.chunk.js"
   ]
 }
