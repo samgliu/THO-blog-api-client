@@ -3,8 +3,6 @@ import { GlobalContext } from '../context/GlobalState';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import apiClient from './http-common';
-import axios from 'axios';
-require('dotenv').config();
 
 function Comments({ comments, deleteCommentLocal }) {
     const { isAdmin } = useContext(GlobalContext);
@@ -45,16 +43,9 @@ function Comments({ comments, deleteCommentLocal }) {
     }
     async function deleteComment(cid) {
         try {
+            //const params = `${process.env.REACT_APP_BLOG_API}${id}/comment/${cid}/delete`;
             const params = `/${id}/comment/${cid}/delete`;
-            const res = await axios.delete(
-                params,
-                {
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                },
-                { withCredentials: true }
-            );
+            const res = await apiClient.delete(params);
             if (res.status === 200) {
                 navigate(`/${id}`);
             }

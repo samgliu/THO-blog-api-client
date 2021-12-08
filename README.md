@@ -26,8 +26,10 @@ RESTful
 
 # API Usage:
 
-must change package.json to api server addres like:
-"proxy": "https://morning-dawn-19775.herokuapp.com/"
+headers: {
+'Content-type': 'application/json',
+'Access-Control-Allow-Origin': 'localhost:3001', //must change to the client host
+},
 
 # Getting Started with Create React App
 
