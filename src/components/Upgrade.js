@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import { useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
-import axios from 'axios';
+import apiClient from './http-common';
 
 function Upgrade() {
     const [errors, setErrors] = useState(null);
@@ -37,15 +37,7 @@ function Upgrade() {
     async function upgradePostData() {
         try {
             const params = `/upgrade-admin?admin_password=${state.admin_password}`;
-            const res = await axios.put(
-                params,
-                {
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                },
-                { withCredentials: true }
-            );
+            const res = await apiClient.put(params);
             if (res.status === 200) {
                 setIsLoggedIn(true);
                 setIsAdmin(true);

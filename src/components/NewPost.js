@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
-import axios from 'axios';
+import apiClient from './http-common';
 
 function NewPost() {
     const [errors, setErrors] = useState(null);
@@ -47,15 +47,7 @@ function NewPost() {
     async function newPostPostData() {
         try {
             const params = `/create-post?topic=${state.topic}&content=${state.content}`;
-            const res = await axios.post(
-                params,
-                {
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                },
-                { withCredentials: true }
-            );
+            const res = await apiClient.post(params);
             if (res.status === 200) {
                 navigate('/');
             }

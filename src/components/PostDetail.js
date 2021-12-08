@@ -6,6 +6,8 @@ import { useParams } from 'react-router-dom';
 import apiClient from './http-common';
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import axios from 'axios';
+require('dotenv').config();
 
 function PostDetail() {
     const id = useParams().id;
@@ -44,8 +46,20 @@ function PostDetail() {
 
     async function postCommentData(name, content) {
         try {
+            const params = `/${id}/comment-create?name=${name}&content=${content}`;
+            /*
             const res = await apiClient.post(
                 `/${id}/comment-create?name=${name}&content=${content}`
+            );
+            */
+            const res = await axios.post(
+                params,
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                },
+                { withCredentials: true }
             );
             let newComments = [
                 ...comments,

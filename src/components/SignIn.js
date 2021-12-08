@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import { useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
-import axios from 'axios';
 import apiClient from './http-common';
 
 function SignIn() {
