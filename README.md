@@ -26,6 +26,9 @@ RESTful
 
 # Usage:
 
+Upgrading to admin gives user post/delete authorization.  
+Anyone can comment.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
