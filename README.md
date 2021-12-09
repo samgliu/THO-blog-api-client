@@ -1,4 +1,4 @@
-# Blog API server
+# Blog API Client
 
 # Description
 
