@@ -2,7 +2,7 @@
 
 # Description
 
-A blog API server side build for TOP project.
+A blog API client side build for TOP project.
 
 Server repository:https://github.com/samgliu/THO-blog-api  
 Server API Demo:https://morning-dawn-19775.herokuapp.com/
@@ -21,10 +21,10 @@ Log in/out
 Auth  
 Post  
 Comment  
-Server/Client/CMS
+Server/Client/
 RESTful
 
-# API Usage:
+# Usage:
 
 headers: {
 'Content-type': 'application/json',
