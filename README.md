@@ -26,11 +26,6 @@ RESTful
 
 # Usage:
 
-headers: {
-'Content-type': 'application/json',
-'Access-Control-Allow-Origin': 'localhost:3001', //must change to the client host
-},
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
