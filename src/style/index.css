@@ -46,6 +46,20 @@ button {
     box-shadow: rgba(236, 107, 107, 0.3) 1px 2px 2px 0px,
         rgba(233, 135, 135, 0.3) 1px 2px 2px 2px;
 }
+.edit-btn {
+    height: 1.5em;
+    background: var(--CLightBlue);
+    border: none;
+    border-radius: 0.25em;
+    color: white;
+    font-weight: 600;
+    padding: 0.2em 1em 0.2em 1em;
+    margin-right: 2em;
+}
+.edit-btn:hover {
+    box-shadow: rgba(104, 165, 201, 0.3) 1px 2px 2px 0px,
+        rgba(101, 172, 212, 0.3) 1px 2px 2px 2px;
+}
 /* header */
 header {
     margin: 0;

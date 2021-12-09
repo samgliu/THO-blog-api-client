@@ -1,8 +1,7 @@
-import {} from 'react-router-dom';
 import Header from '../components/Header';
 import Comments from '../components/Comments';
 import NewComment from '../components/NewComment';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import apiClient from './http-common';
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
@@ -11,7 +10,8 @@ function PostDetail() {
     const id = useParams().id;
     const [post, setPost] = useState([]);
     const [comments, setComments] = useState([]);
-    const { setUser, setIsLoggedIn, setIsAdmin } = useContext(GlobalContext);
+    const { setUser, setIsLoggedIn, isAdmin, setIsAdmin } =
+        useContext(GlobalContext);
     /*
     const fortmatResponse = (res) => {
         return JSON.stringify(res, null, 2);
@@ -77,12 +77,13 @@ function PostDetail() {
                     <div className="post-header">
                         <div></div>
                         <h4>{post.Topic}</h4>
-                        {/*isAdmin ? (
-                            <button className="delete-btn">Delete</button>
+                        {isAdmin ? (
+                            <Link to={`/${id}/edit`} className="edit-btn">
+                                Edit
+                            </Link>
                         ) : (
                             <div></div>
-                        )*/}
-                        <div></div>
+                        )}
                     </div>
 
                     <div className="author-container">

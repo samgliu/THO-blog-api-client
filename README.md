@@ -20,13 +20,14 @@ Create User
 Log in/out  
 Auth  
 Post  
-Comment  
+Comment
+Edit  
 Server/Client/
 RESTful
 
 # Usage:
 
-Upgrading to admin gives user post/delete authorization.  
+Upgrading to admin gives user post/edit/delete authorization.  
 Anyone can comment.
 
 # Getting Started with Create React App
