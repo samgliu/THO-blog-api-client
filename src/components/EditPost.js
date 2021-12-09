@@ -65,8 +65,9 @@ function EditPost() {
     }
     async function editPostPostData() {
         try {
-            const params = `/${id}?topic=${state.topic}&content=${state.content}`;
-            const res = await apiClient.put(params);
+            const params = `/${id}`;
+
+            const res = await apiClient.put(params, JSON.stringify(state));
             if (res.status === 200) {
                 navigate(`/${id}`);
             }

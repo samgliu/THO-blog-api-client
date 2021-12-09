@@ -114,6 +114,10 @@ header ul {
         rgba(236, 236, 236, 0.3) 0px 4px 4px 4px;
     overflow: hidden;
 }
+.post-container > p {
+    padding: 2em;
+    white-space: pre-wrap;
+}
 .post-container h4 {
     text-align: center;
 }
@@ -163,6 +167,7 @@ header ul {
 }
 .post-detail-container > p {
     padding: 2em;
+    white-space: pre-wrap;
 }
 .post-detail-container > form {
     justify-self: center;

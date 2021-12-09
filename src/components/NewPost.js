@@ -46,8 +46,8 @@ function NewPost() {
     }
     async function newPostPostData() {
         try {
-            const params = `/create-post?topic=${state.topic}&content=${state.content}`;
-            const res = await apiClient.post(params);
+            const params = `/create-post`;
+            const res = await apiClient.post(params, JSON.stringify(state));
             if (res.status === 200) {
                 navigate('/');
             }
